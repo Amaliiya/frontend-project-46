@@ -1,0 +1,26 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "no desc",
+  "homepage": "https://github.com/Amaliiya/frontend-project-46#readme",
+  "bin":{
+    "gendiff": "gendiff.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Amaliiya/frontend-project-46/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amaliiya/frontend-project-46.git"
+  },
+  "license": "ISC",
+  "author": "Amaliya",
+  "type": "module",
+  "main": "gendiff.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "commander": "^15.0.0"
+  }
+}
