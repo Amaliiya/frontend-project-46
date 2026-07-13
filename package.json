@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "no desc",
   "homepage": "https://github.com/Amaliiya/frontend-project-46#readme",
-  "bin":{
+  "bin": {
     "gendiff": "gendiff.js"
   },
   "bugs": {
@@ -21,6 +21,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "commander": "^15.0.0"
+    "commander": "^15.0.0",
+    "es-toolkit": "^1.49.0",
+    "lodash": "^4.18.1"
   }
 }
