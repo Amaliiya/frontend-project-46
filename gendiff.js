@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
 import path from 'node:path';
-import { cwd } from 'node:process';
 import { parseFile } from './fs.js';
 import _ from 'lodash'
 import { union } from 'es-toolkit';
