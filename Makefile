@@ -2,7 +2,7 @@ install:
 	npm ci
 
 lint:
-	npm eslint .
+	npm run lint
 
 test:
 	npx jest --watch
