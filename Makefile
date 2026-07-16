@@ -1,5 +1,11 @@
+install:
+	npm ci
+
 lint:
-	npm run lint
+	npm eslint .
 
 test:
-	gendiff.test.js
+	npx jest --watch
+
+test-coverage:
+	npm test -- --coverage
