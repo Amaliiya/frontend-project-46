@@ -1,4 +1,4 @@
-import { gendiff, formatStylish } from '../src/diff.js'
+import { gendiff } from '../src/diff.js'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'node:path';
