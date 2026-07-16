@@ -5,7 +5,7 @@ lint:
 	npm run lint
 
 test:
-	npx jest --watch
+	npm test
 
 test-coverage:
 	npm test -- --coverage
