@@ -6,4 +6,4 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Amaliiya_frontend-project-46&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Amaliiya_frontend-project-46)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Amaliiya_frontend-project-46&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Amaliiya_frontend-project-46)
 
-[![asciicast](https://asciinema.org/a/1260878.svg)](https://asciinema.org/a/1260878)
+[![asciicast](https://asciinema.org/a/L4VzeAmZgkPgcShW.svg)](https://asciinema.org/a/L4VzeAmZgkPgcShW)
