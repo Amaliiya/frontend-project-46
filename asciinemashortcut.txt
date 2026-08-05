@@ -1,0 +1,4 @@
+gendiff file1.yaml file2.yml
+gendiff file1.yaml file2.json
+gendiff file1.json file2.json
+gendiff file1.yaml file1.json
