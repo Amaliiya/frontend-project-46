@@ -1,6 +1,7 @@
-import _ from 'lodash';
+ import _ from 'lodash';
 import { union } from 'es-toolkit';
 import { parseFile } from '../src/parsers.js';
+import formatDiff from '../formatters/index.js';
 
 function buildDiff(obj1, obj2) {
   const keys = _.sortBy(union(Object.keys(obj1), Object.keys(obj2)));
@@ -33,7 +34,7 @@ function gendiff(filepath1, filepath2) {
   const obj1 = parseFile(filepath1);
   const obj2 = parseFile(filepath2);
   const diff = buildDiff(obj1, obj2);
-  return diff;
+  return formatDiff(diff, format);
 }
 
-export { gendiff };
+export { gendiff, buildDiff };
