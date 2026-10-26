@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'node:path';
 import fs from 'node:fs';
+import test from 'node:test';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -10,6 +11,7 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const expectedDiff = fs.readFileSync(getFixturePath('expectedDiff.txt'), 'utf-8');
 const expectedEqual = fs.readFileSync(getFixturePath('expectedEqual.txt'), 'utf-8');
+const expectedPlain = fs.readFileSync(getFixturePath('expectedPlain.txt'), 'utf-8');
 
 test('different yml files', () => {
     const file1 = getFixturePath('file1.yml');
@@ -31,4 +33,10 @@ test('different json files', () => {
 test('identical json files', () => {
     const file1 = getFixturePath('file1.json');
     expect(formatStylish(gendiff(file1, file1))).toEqual(expectedEqual)
+});
+
+test('plain format', () => {
+    const file1 = getFixturePath('file1.json');
+    const file2 = getFixturePath('file2.json');
+    expect(formatPlain(gendiff(file1, file2))).toEqual(expectedPlain)
 });

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
 import path from 'node:path';
-import { gendiff, formatStylish } from './src/diff.js'
+import { gendiff } from './src/diff.js'
 const program = new Command();
 
 program
@@ -11,11 +11,11 @@ program
   .argument('<filepath1>')
   .argument('<filepath2>')
   .option('-f, --format <type>', 'output format', 'stylish')
-  .action((filepath1, filepath2) => {
+  .action((filepath1, filepath2, options) => {
     let fullPath1 = path.resolve(filepath1)
     let fullPath2 = path.resolve(filepath2)
-    const diff = gendiff(fullPath1, fullPath2);
-    console.log(formatStylish(diff));
+    const diff = gendiff(fullPath1, fullPath2, options.format);
+    console.log(diff);
   })
   
 program.parse();

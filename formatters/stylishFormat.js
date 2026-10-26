@@ -40,3 +40,5 @@ function formatStylish(diff, depth = 1) {
   }
   return lines.join('\n');
 }
+
+export default formatStylish

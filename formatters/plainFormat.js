@@ -1,4 +1,5 @@
-import { diff } from '../src/diff.js'
+// import { diff } from '../src/diff.js'
+import _ from 'lodash'
 
 function formatPlainValue(value) {
   if (_.isPlainObject(value) || Array.isArray(value)) {
@@ -35,4 +36,4 @@ function formatPlain(diff, parentPath = '') {
   return lines;
 }
 
-export { formatPlain }
+export default formatPlain 
