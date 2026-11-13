@@ -1,14 +1,14 @@
 import _ from 'lodash';
 
 function formatValue(value, depth) {
-  if (Array.isArray(value)) {
+  if (value === null || typeof value !== 'object') {
+    return value;
+  }
     const indentSize = 4;
     const indent = ' '.repeat(depth * indentSize);
     const entries = Object.entries(value);
     const nestedLines = entries.map(([k, v]) => `${indent}    ${k}: ${formatValue(v, depth + 1)}`);
     return `{\n${nestedLines.join('\n')}\n${indent}}`;
-  }
-  return value;
 }
 
 function formatStylish(diff, depth = 1) {
