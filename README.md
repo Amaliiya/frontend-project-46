@@ -6,7 +6,7 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Amaliiya_frontend-project-46&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Amaliiya_frontend-project-46)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Amaliiya_frontend-project-46&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Amaliiya_frontend-project-46)
 
-<script src="https://asciinema.org/a/L4VzeAmZgkPgcShW.js" id="asciicast-L4VzeAmZgkPgcShW" async="true"></script>
-<script src="https://asciinema.org/a/1262371.js" id="asciicast-1262371" async="true"></script>
-<script src="https://asciinema.org/a/W4vC3g9qyL5rIMRy.js" id="asciicast-W4vC3g9qyL5rIMRy" async="true"></script>
-<script src="https://asciinema.org/a/l0qrxdvbwcslFbJv.js" id="asciicast-l0qrxdvbwcslFbJv" async="true"></script>
+[![asciicast](https://asciinema.org/a/L4VzeAmZgkPgcShW.svg)](https://asciinema.org/a/L4VzeAmZgkPgcShW)
+[![asciicast](https://asciinema.org/a/1262371.svg)](https://asciinema.org/a/1262371)
+[![asciicast](https://asciinema.org/a/W4vC3g9qyL5rIMRy.svg)](https://asciinema.org/a/W4vC3g9qyL5rIMRy)
+[![asciicast](https://asciinema.org/a/l0qrxdvbwcslFbJv.svg)](https://asciinema.org/a/l0qrxdvbwcslFbJv)
