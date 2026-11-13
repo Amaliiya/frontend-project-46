@@ -1,4 +1,5 @@
-import { gendiff, formatStylish, formatPlain, formatJson } from '../src/diff.js'
+import { gendiff, formatStylish, formatPlain } from '../src/diff.js'
+import formatJson from '../src/formatters/json.js';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'node:path';
