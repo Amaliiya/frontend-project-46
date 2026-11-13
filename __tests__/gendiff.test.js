@@ -1,4 +1,4 @@
-import { gendiff, formatStylish } from '../src/diff.js'
+import { gendiff, formatStylish, formatPlain, formatJson } from '../src/diff.js'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'node:path';
@@ -45,5 +45,5 @@ test('plain format', () => {
 test('json format', () => {
     const file1 = getFixturePath('file1.json');
     const file2 = getFixturePath('file2.json');
-    expect(formatPlain(gendiff(file1, file2))).toEqual(expectedJSON)
+    expect(formatJson(gendiff(file1, file2))).toEqual(expectedJSON)
 });
