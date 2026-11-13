@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { fileURLToPath } from 'node:url';
 import { Command } from 'commander';
 import path from 'node:path';
 import { gendiff } from './src/diff.js'
@@ -19,6 +18,4 @@ program
     console.log(diff);
   })
   
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  program.parse();
-}
+program.parse();
