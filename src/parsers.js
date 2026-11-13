@@ -2,9 +2,6 @@ import fs from 'node:fs';
 import { load } from 'js-yaml';
 import path from 'node:path';
 
-function getFormat(filepath) {
-  return filepath.split('.').pop();
-}
 
 export function parseFile(filepath) {
   const data = fs.readFileSync(filepath, 'utf-8');

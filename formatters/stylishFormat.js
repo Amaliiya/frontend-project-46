@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 function formatValue(value, depth) {
-  if (_.isPlainObject(value)) {
+  if (Array.isArray(value)) {
     const indentSize = 4;
     const indent = ' '.repeat(depth * indentSize);
     const entries = Object.entries(value);

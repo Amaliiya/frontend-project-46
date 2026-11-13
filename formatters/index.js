@@ -10,6 +10,6 @@ export default function formatDiff(diff, format) {
       return formatJson(diff);
     case 'stylish':
     default:
-      return `{\n${formatStylish(diff)}\n}`;
+      return formatStylish(diff);
   }
 } 

@@ -22,7 +22,7 @@ test('different yml files', () => {
 
 test('identical yml files', () => {
     const file1 = getFixturePath('file1.yml');
-    expect(gendiff(file1, 'stylish')).toEqual(expectedEqual);
+    expect(gendiff(file1, file1, 'stylish')).toEqual(expectedEqual);
 });
 
 test('different json files', () => {
@@ -33,7 +33,7 @@ test('different json files', () => {
 
 test('identical json files', () => {
     const file1 = getFixturePath('file1.json');
-    expect(gendiff(file1, file2, 'stylish')).toEqual(expectedEqual);
+    expect(gendiff(file1, file1, 'stylish')).toEqual(expectedEqual);
 });
 
 test('plain format', () => {
