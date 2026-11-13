@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { union } from 'es-toolkit';
 import { parseFile } from '../src/parsers.js';
 import formatDiff from '../formatters/index.js';
