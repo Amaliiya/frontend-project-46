@@ -1,10 +1,9 @@
-import { gendiff, formatStylish, formatPlain } from '../src/diff.js'
-import formatJson from '../formatters/JSONFormat.js';
+import { gendiff } from '../src/diff.js'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'node:path';
 import fs from 'node:fs';
-import test from 'node:test';
+import { test, expect } from '@jest/globals';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -18,33 +17,33 @@ const expectedJSON = fs.readFileSync(getFixturePath('expectedJSON.json'), 'utf-8
 test('different yml files', () => {
     const file1 = getFixturePath('file1.yml');
     const file2 = getFixturePath('file2.yml');
-    expect(formatStylish(gendiff(file1, file2))).toEqual(expectedDiff)
+    expect(gendiff(file1, file2, 'stylish')).toEqual(expectedDiff);
 });
 
 test('identical yml files', () => {
     const file1 = getFixturePath('file1.yml');
-    expect(formatStylish(gendiff(file1, file1))).toEqual(expectedEqual)
+    expect(gendiff(file1, file2, 'stylish')).toEqual(expectedEqual);
 });
 
 test('different json files', () => {
     const file1 = getFixturePath('file1.json');
     const file2 = getFixturePath('file2.json');
-    expect(formatStylish(gendiff(file1, file2))).toEqual(expectedDiff)
+    expect(gendiff(file1, file2, 'stylish')).toEqual(expectedDiff);
 });
 
 test('identical json files', () => {
     const file1 = getFixturePath('file1.json');
-    expect(formatStylish(gendiff(file1, file1))).toEqual(expectedEqual)
+    expect(gendiff(file1, file2, 'stylish')).toEqual(expectedEqual);
 });
 
 test('plain format', () => {
     const file1 = getFixturePath('file1.json');
     const file2 = getFixturePath('file2.json');
-    expect(formatPlain(gendiff(file1, file2))).toEqual(expectedPlain)
+    expect(gendiff(file1, file2, 'plain')).toEqual(expectedPlain);
 });
 
 test('json format', () => {
     const file1 = getFixturePath('file1.json');
     const file2 = getFixturePath('file2.json');
-    expect(formatJson(gendiff(file1, file2))).toEqual(expectedJSON)
+    expect(gendiff(file1, file2, 'json')).toEqual(expectedJSON);
 });

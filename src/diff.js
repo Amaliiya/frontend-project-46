@@ -7,10 +7,10 @@ function buildDiff(obj1, obj2) {
   const keys = _.sortBy(union(Object.keys(obj1), Object.keys(obj2)));
 
   return keys.map(key => {
-    if (!(key in obj1)) {
+    if (!Object.hasOwn(obj1, key)) {
       return { key, type: 'added', value: obj2[key] };
     }
-    if (!(key in obj2)) {
+    if (!Object.hasOwn(obj2, key)) {
       return { key, type: 'removed', value: obj1[key] };
     }
 
@@ -21,7 +21,7 @@ function buildDiff(obj1, obj2) {
       return { key, type: 'nested', children: buildDiff(value1, value2) };
     }
 
-    if (value1 === value2) {
+    if (_.isEqual(value1, value2)) {
       return { key, type: 'unchanged', value: value1 };
     }
 
