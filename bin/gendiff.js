@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import process from 'node:process';
 import { gendiff } from '../formatters/index.js'
 const program = new Command();
 
@@ -20,6 +18,4 @@ program
     console.log(diff);
   })
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  program.parse();
-}
+program.parse();
