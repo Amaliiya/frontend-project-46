@@ -8,3 +8,5 @@ export function gendiff(filepath1, filepath2, format = 'stylish') {
   const diff = buildDiff(obj1, obj2);
   return formatDiff(diff, format);
 }
+
+export default gendiff;
