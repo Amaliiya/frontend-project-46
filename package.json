@@ -4,7 +4,7 @@
   "description": "no desc",
   "homepage": "https://github.com/Amaliiya/frontend-project-46#readme",
   "bin": {
-    "gendiff": "gendiff.js"
+    "gendiff": "./bin/gendiff.js"
   },
   "bugs": {
     "url": "https://github.com/Amaliiya/frontend-project-46/issues"
@@ -16,7 +16,7 @@
   "license": "ISC",
   "author": "Amaliya",
   "type": "module",
-  "main": "gendiff.js",
+  "main": ".src/index.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",

@@ -1,8 +1,9 @@
 import formatStylish from './stylishFormat.js';
 import formatPlain from './plainFormat.js';
 import formatJson from './JSONFormat.js'
+import { parseFile } from '../src/parsers.js';
 
-export default function formatDiff(diff, format) {
+function formatDiff(diff, format) {
   switch (format) {
     case 'plain':
       return formatPlain(diff).join('\n');
@@ -13,3 +14,11 @@ export default function formatDiff(diff, format) {
       return formatStylish(diff);
   }
 } 
+function gendiff(filepath1, filepath2, format = 'stylish') {
+  const obj1 = parseFile(filepath1);
+  const obj2 = parseFile(filepath2);
+  const diff = buildDiff(obj1, obj2);
+  return formatDiff(diff, format);
+}
+
+export { gendiff, formatDiff }
