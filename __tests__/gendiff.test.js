@@ -1,4 +1,4 @@
-import { gendiff } from '../formatters/index.js'
+import { gendiff } from '../src/index.js'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'node:path';
