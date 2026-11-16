@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 function formatValue(value, depth) {
   if (value === null || typeof value !== 'object') {
     return value;
