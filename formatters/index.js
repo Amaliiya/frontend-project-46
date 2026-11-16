@@ -2,6 +2,7 @@ import formatStylish from './stylishFormat.js';
 import formatPlain from './plainFormat.js';
 import formatJson from './JSONFormat.js'
 import { parseFile } from '../src/parsers.js';
+import { buildDiff } from '../src/diff.js';
 
 function formatDiff(diff, format) {
   switch (format) {
